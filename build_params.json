@@ -1,0 +1,10 @@
+{
+  "build_host":"ps-site",
+  "project":"ps-site",
+  "docker_targets":[
+    {
+      "file": "Dockerfile",
+      "image": "ps-site"
+    }
+  ]
+}
