@@ -27,7 +27,7 @@ validation_size = 0.2
 img_size = 128
 num_channels = 3
 train_path='./training_data'
-save_path='./save'
+save_path='./save/'
 
 
 # We shall load all the training and validation images and labels into memory using openCV and use that during training
