@@ -7,4 +7,4 @@ WORKDIR /usr/src/app
 
 RUN pip install -r requirements.txt
 
-CMD [ "python", "train.py" ]
+CMD [ "python", "gpu_test.py" ]
