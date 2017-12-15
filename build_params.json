@@ -1,10 +1,10 @@
 {
-  "build_host":"ps-site",
-  "project":"ps-site",
+  "build_host":"toybox",
+  "project":"customimage",
   "docker_targets":[
     {
       "file": "Dockerfile",
-      "image": "ps-site"
+      "image": "customimage"
     }
   ]
 }
