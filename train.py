@@ -14,7 +14,7 @@ set_random_seed(2)
 
 
 import os
-print(os.path.dirname(os.path.abspath(__file__)))
+print("running from:", os.path.dirname(os.path.abspath(__file__)))
 
 batch_size = 32
 
@@ -26,7 +26,7 @@ num_classes = len(classes)
 validation_size = 0.2
 img_size = 128
 num_channels = 3
-train_path='training_data'
+train_path='./training_data'
 
 # We shall load all the training and validation images and labels into memory using openCV and use that during training
 data = dataset.read_train_sets(train_path, img_size, classes, validation_size=validation_size)
