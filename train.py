@@ -13,6 +13,9 @@ from tensorflow import set_random_seed
 set_random_seed(2)
 
 
+import os
+print(os.path.dirname(os.path.abspath(__file__)))
+
 batch_size = 32
 
 #Prepare input data
