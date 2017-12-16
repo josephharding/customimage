@@ -11,7 +11,8 @@ image_path = os.environ['IMAGE_PATH']
 filename = dir_path +'/' +image_path
 print("image to classify:", filename)
 
-save_path='./save/'
+save_path=dir_path + './save/'
+print("save path:", save_path)
 
 image_size=128
 num_channels=3
