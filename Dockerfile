@@ -1,5 +1,4 @@
-#FROM tensorflow/tensorflow:latest-gpu
-FROM nvidia/cuda
+FROM nvidia/cuda:8.0-cudnn6-runtime
 
 RUN apt update && apt install -y python-pip
 
@@ -10,4 +9,4 @@ WORKDIR /usr/src/app
 
 RUN pip install -r requirements.txt
 
-CMD [ "python", "gpu_test.py" ]
+CMD [ "python", "train.py" ]
