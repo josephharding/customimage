@@ -11,9 +11,6 @@ image_path = os.environ['IMAGE_PATH']
 filename = dir_path +'/' +image_path
 print("image to classify:", filename)
 
-save_path=dir_path + '/save/'
-print("save path:", save_path)
-
 image_size=128
 num_channels=3
 images = []
@@ -31,9 +28,9 @@ x_batch = images.reshape(1, image_size,image_size,num_channels)
 ## Let us restore the saved model 
 sess = tf.Session()
 # Step-1: Recreate the network graph. At this step only graph is created.
-saver = tf.train.import_meta_graph('/usr/src/app/save/.meta')
+saver = tf.train.import_meta_graph('./save/.meta')
 # Step-2: Now let's load the weights saved using the restore method.
-saver.restore(sess, tf.train.latest_checkpoint('/usr/src/app/save/'))
+saver.restore(sess, tf.train.latest_checkpoint('./save/'))
 
 # Accessing the default graph which we have restored
 graph = tf.get_default_graph()
