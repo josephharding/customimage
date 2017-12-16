@@ -17,6 +17,7 @@ import os
 print("running from:", os.path.dirname(os.path.abspath(__file__)))
 print("CLASS_DIRS:", os.environ['CLASS_DIRS'])
 
+NUMBER_OF_CKPT = 60
 batch_size = 32
 
 #Prepare input data
@@ -230,7 +231,7 @@ def train(num_iteration):
             epoch = int(i / int(data.train.num_examples/batch_size))    
             
             show_progress(epoch, feed_dict_tr, feed_dict_val, val_loss)
-            saver.save(session, save_path) 
+            saver.save(session, save_path, global_step=NUMBER_OF_CKPT) 
 
 
     total_iterations += num_iteration
