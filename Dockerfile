@@ -1,4 +1,5 @@
-FROM tensorflow/tensorflow:latest-gpu
+#FROM tensorflow/tensorflow:latest-gpu
+FROM nvidia/cuda
 
 RUN mkdir -p /usr/src/app
 COPY . /usr/src/app
