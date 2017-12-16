@@ -9,6 +9,8 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 #image_path=sys.argv[1] 
 image_path = os.environ['IMAGE_PATH']
 filename = dir_path +'/' +image_path
+print("image to classify:", filename)
+
 image_size=128
 num_channels=3
 images = []
