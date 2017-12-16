@@ -3,8 +3,12 @@
   "project":"customimage",
   "docker_targets":[
     {
-      "file": "Dockerfile",
-      "image": "customimage"
+      "file": "Dockerfile-train",
+      "image": "customimage-train"
+    },
+    {
+      "file": "Dockerfile-predict",
+      "image": "customimage-predict"
     }
   ]
 }

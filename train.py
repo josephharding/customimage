@@ -15,11 +15,12 @@ set_random_seed(2)
 
 import os
 print("running from:", os.path.dirname(os.path.abspath(__file__)))
+print("CLASS_DIRS:", os.environ['CLASS_DIRS'])
 
 batch_size = 32
 
 #Prepare input data
-classes = ['dogs','cats']
+classes = os.environ['CLASS_DIRS'].split(",")
 num_classes = len(classes)
 
 # 20% of the data will automatically be used for validation
