@@ -33,7 +33,7 @@ sess = tf.Session()
 # Step-1: Recreate the network graph. At this step only graph is created.
 saver = tf.train.import_meta_graph('/usr/src/app/save/.meta')
 # Step-2: Now let's load the weights saved using the restore method.
-saver.restore(sess, tf.train.latest_checkpoint('/usr/src/app/save/checkpoint'))
+saver.restore(sess, tf.train.latest_checkpoint('/usr/src/app/save/'))
 
 # Accessing the default graph which we have restored
 graph = tf.get_default_graph()
