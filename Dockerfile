@@ -1,6 +1,6 @@
 FROM nvidia/cuda:8.0-cudnn6-runtime
 
-RUN apt update && apt install -y python-pip
+RUN apt update && apt install -y python-pip libglib2.0-0
 
 RUN mkdir -p /usr/src/app
 COPY . /usr/src/app
